@@ -1,0 +1,29 @@
+.infoCard {
+  background-color: white;
+  width: 90%;
+  margin: 0 auto;
+  border-radius: 0.9rem;
+  height: 17rem;
+  position: absolute;
+  top: 10rem;
+  left: 5%;
+  justify-content: space-evenly;
+  z-index: 6;
+}
+
+.infoCard .name {
+  color: #969696;
+}
+
+.infoCard .value {
+  font-weight: 500;
+  font-size: 1.25rem;
+  width: 90%;
+}
+
+.infoCard .flex {
+  gap: 0.2rem;
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+}
