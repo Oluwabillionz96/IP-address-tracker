@@ -4,8 +4,11 @@ This is a solution to the [IP address tracker challenge on Frontend Mentor](http
 
 ## Table of contents
 
--[Overview](#overview) -[Features](#features) -[Tech Stack](#tech-stack) -[How it works](#how-it-works) -[API Used](#api-used)
-
+-[Overview](#overview)
+ -[Features](#features) 
+ -[Tech Stack](#tech-stack) 
+ -[How it works](#how-it-works) 
+ -[API Used](#api-used)
 - [Learnings](#learnings)
 - [Contributions](#contributions)
 - [License](#licenses)
