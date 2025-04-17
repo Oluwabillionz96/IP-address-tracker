@@ -1,7 +1,8 @@
 import { MapContainer, Marker, Popup, TileLayer } from "react-leaflet";
 import "leaflet/dist/leaflet.css";
 import { Icon } from "leaflet";
-import ChangeView from "../logics/changeView";
+import ChangeView from "../logics/ChangeView";
+// import ChangeView from "../logics/changeView";
 const Map = ({ coordinates = [48.8566, 2.3522] }) => {
   const customIcon = new Icon({
     iconUrl: "./icon-location.svg",
