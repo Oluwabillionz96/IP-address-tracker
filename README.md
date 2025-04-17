@@ -14,7 +14,7 @@ This is a solution to the [IP address tracker challenge on Frontend Mentor](http
 
 IP Address tracker is a web application that allows users to search for any IP address or domain name and display its ISP details, timezone and location on an Interactive map.
 
-![App ScreenShot](./IP-address-tracker-screen-shot.PNG)
+![App ScreenShot](./public/IP-address-tracker-screen-shot.PNG)
 
 ## Features
 
