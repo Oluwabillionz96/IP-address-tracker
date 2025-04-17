@@ -14,11 +14,7 @@ const Map = ({ coordinates = [48.8566, 2.3522] }) => {
         attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
         url="https://tile.openstreetmap.org/{z}/{x}/{y}.png"
       />
-      <Marker
-        position={coordinates}
-        icon={customIcon}
-        children={<Popup>THis is the location</Popup>}
-      />
+      <Marker position={coordinates} icon={customIcon} />
     </MapContainer>
   );
 };

@@ -27,3 +27,33 @@
   margin: 0 auto;
   text-align: center;
 }
+
+@media (min-width: 1024px) {
+  .infoCard {
+    width: 70%;
+    height: 10rem;
+    top: 16rem;
+    left: 15%;
+    flex-direction: row;
+    padding: 0 2rem;
+    gap: 2rem;
+  }
+
+  .infoCard .flex {
+    gap: 0.2rem;
+    height: 50%;
+    margin: 0;
+    text-align: left;
+    border-right: 2px solid rgb(185, 182, 182);
+  }
+
+  .infoCard .flex:nth-child(4) {
+    border: none;
+  }
+
+  .infoCard .name,
+  .infoCard .value {
+    text-align: left;
+    width: 100%;
+  }
+}

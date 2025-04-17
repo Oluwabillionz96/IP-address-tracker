@@ -3,18 +3,18 @@ import InfoCard from "../components/InfoCard";
 import "../styles/homePage.css";
 import fetchData, { Location } from "../logics/fetchData";
 import Map from "../components/Map";
+import Spinner from "../components/Spinner";
 
 const HomePage = () => {
   const [data, setData] = useState({});
+  const [loading, setLoading] = useState(true);
   const [address, setAddress] = useState("");
   useEffect(() => {
     fetchData().then((data) => {
       setData(data);
-      localStorage.setItem("data", JSON.stringify(data));
-      console.log("fetched data");
+      setLoading(false);
     });
   }, []);
-  //   console.log(data);
   return (
     <>
       <section className="hero-section">
@@ -31,12 +31,15 @@ const HomePage = () => {
           />
           <button
             onClick={() => {
-              fetchData(address).then((data) => {
-                setData(data);
-                console.log(data);
-                localStorage.setItem("data", JSON.stringify(data));
-                console.log("fetched data");
-              });
+              if (address) {
+                setLoading(true);
+                fetchData(address).then((data) => {
+                  setData(data);
+                  setLoading(false);
+                });
+              } else {
+                alert("Input must not be empty");
+              }
             }}
           >
             <img
@@ -46,7 +49,7 @@ const HomePage = () => {
           </button>
         </div>
       </section>
-      {data && Object.keys(data).length > 0 && (
+      {!loading && data && Object.keys(data).length > 0 && (
         <InfoCard
           IP_Address={data?.ip}
           timeZone={data.location ? ` UTC ${data?.location?.timezone}` : ""}
@@ -54,11 +57,15 @@ const HomePage = () => {
           location={<Location data={data} />}
         />
       )}
-      <div className="map">
-        {data && data.location && (
-          <Map coordinates={[data.location.lat, data.location.lng]} />
-        )}
-      </div>
+      {loading ? (
+        <Spinner />
+      ) : (
+        <div className="map">
+          {data && data.location && (
+            <Map coordinates={[data.location.lat, data.location.lng]} />
+          )}
+        </div>
+      )}
     </>
   );
 };

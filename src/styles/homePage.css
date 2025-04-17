@@ -49,6 +49,30 @@ h1 {
 }
 
 .map {
-  /* background-color: red; */
   height: 70vh;
+}
+
+@media (min-width: 1024px) {
+  .hero-section {
+    background: url("../assets/pattern-bg-desktop.png");
+  }
+
+  h1 {
+    font-size: 3rem;
+  }
+
+  .input-container {
+    width: 40%;
+    height: 4rem;
+    margin: 0 auto 7rem;
+    position: relative;
+  }
+
+  .input-container > input::placeholder {
+    font-size: 1rem;
+  }
+
+  .map {
+    height: 52vh;
+  }
 }

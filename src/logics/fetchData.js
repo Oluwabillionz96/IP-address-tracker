@@ -4,7 +4,17 @@ const fetchData = async (usersInput) => {
   }`;
 
   if (usersInput) {
-    url += `&ipAddress=${usersInput.trim()}`;
+    if (usersInput.includes("https://") || usersInput.includes("http://")) {
+      usersInput = usersInput.split("://")[1].toLowerCase();
+    }
+
+    if (usersInput.toLowerCase().includes(".com")) {
+      url += `&domain=${usersInput.trim()}`;
+    } else if (!isNaN(Number(usersInput.split(".")[0]))) {
+      url += `&ipAddress=${usersInput.trim()}`;
+    } else {
+      alert("Invalid Input");
+    }
   }
   try {
     const response = await fetch(url);
