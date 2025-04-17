@@ -5,10 +5,10 @@ This is a solution to the [IP address tracker challenge on Frontend Mentor](http
 ## Table of contents
 
 - [Overview](#overview)
- - [Features](#features) 
- - [Tech Stack](#tech-stack) 
- - [How it works](#how-it-works) 
- - [API Used](#api-used)
+- [Features](#features)
+- [Tech Stack](#tech-stack)
+- [How it works](#how-it-works)
+- [API Used](#api-used)
 - [Learnings](#learnings)
 - [Contributions](#contributions)
 - [License](#licenses)
@@ -64,5 +64,5 @@ MIT – Use it freely in your own projects.
 
 Created by Your Name
 
-- Twitter: [@gudluck_reuben](https://x.com/gudluck_reuben)
+- Twitter: [@gudluck_reuben](https://twitter.com/intent/follow?screen_name=gudluck_reuben)
 - Email: goodluckreuben96@gmail.com
