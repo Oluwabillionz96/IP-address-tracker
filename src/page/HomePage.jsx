@@ -12,7 +12,7 @@ const HomePage = () => {
   useEffect(() => {
     fetchData().then((data) => {
       setData(data);
-      setLoading(false);
+    //   setLoading(false);
     });
   }, []);
   return (
